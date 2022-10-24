@@ -8,10 +8,6 @@ exports.up = function (knex) {
 		table.string("name", 255);
 		table.integer("day_of_week", 7);
 		table.integer("user_id").unique().references("id").inTable("user");
-		table
-			.specificType("array_of_exercise_id", "integer ARRAY")
-			.references("id")
-			.inTable("exercise");
 	});
 };
 

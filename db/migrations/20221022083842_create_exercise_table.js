@@ -9,6 +9,7 @@ exports.up = function (knex) {
 		table.integer("sets").notNullable();
 		table.integer("reps").notNullable();
 		table.integer("break_time").notNullable();
+		table.integer("workout_id").references("id").inTable("workout");
 	});
 };
 
