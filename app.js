@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const timeout = require("connect-timeout");
+require("dotenv").config();
 const defaultRoutes = require("./Routes/DefaultRoutes");
 const userRoutes = require("./Routes/User/UserRoutes");
 const workoutRoutes = require("./Routes/Workout/WorkoutRoutes");
