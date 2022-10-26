@@ -6,5 +6,5 @@ const { verifyToken } = require("../../Controllers/validationMiddleware");
 router.use("/", verifyToken, (req, res, next) => {
   next();
 });
-router.get("/:workoutid", workout_ctrl.getWorkout);
+router.get("/:userid", workout_ctrl.getWorkouts);
 module.exports = router;

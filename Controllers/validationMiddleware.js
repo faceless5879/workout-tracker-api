@@ -2,6 +2,7 @@ const express = require("express");
 const jwt = require("jsonwebtoken");
 const { ERROR_MSGS, REGEXES } = require("../Configs/Constants");
 require("dotenv").config();
+const knex = require("../db/index");
 
 const verifyToken = (req, res, next) => {
   const authHeader = req.headers["authorization"];
@@ -30,13 +31,19 @@ const verifyToken = (req, res, next) => {
   }
 };
 
-const validatePostUser = (req, res, next) => {
+const validatePostUser = async (req, res, next) => {
   const { email } = req.body;
   const errorMessage = [];
   const isEmailValid = email.match(REGEXES.EMAIL);
   if (!isEmailValid) {
     errorMessage.push(ERROR_MSGS.INVALID_EMAIL);
   }
+
+  const data = await knex.select("*").from("user").where({ email: email });
+  if (data.length > 0) {
+    errorMessage.push(ERROR_MSGS.EMAIL_IN_USE);
+  }
+
   if (errorMessage.length > 0) {
     res.status(400).json({
       message: ERROR_MSGS.VALIDATION_ERROR,
