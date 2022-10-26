@@ -4,6 +4,7 @@ const ERROR_MSGS = {
   UNAUTHORIZED: "Unauthorized",
   INVALID_EMAIL: "Invalid email address",
   EMAIL_IN_USE: "Email already in use",
+  NOT_FOUND: "Not found",
 };
 const REGEXES = {
   EMAIL:
