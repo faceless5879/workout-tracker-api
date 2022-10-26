@@ -1,16 +1,25 @@
 const express = require("express");
+const knex = require("../../db/index");
 const { ERROR_MSGS } = require("../../Configs/Constants");
 
 const WorkoutController = {
-  getWorkout: async (req, res) => {
+  getWorkouts: async (req, res) => {
     try {
-      const { workoutid } = req.params;
-      console.log(workoutid);
-      if (workoutid === undefined) {
+      const { userid } = req.params;
+      console.log(userid);
+      if (userid === undefined) {
         res.status(500).json({ message: ERROR_MSGS.INTERNAL_SERVER_ERROR });
         return;
       }
-      res.status(200).json({ message: "success" });
+
+      const data = await knex("workout").select("*").where({ user_id: userid });
+      console.log(data);
+
+      if (data.length > 0) {
+        res.status(200).json(data);
+        return;
+      }
+      res.status(404).json({ message: ERROR_MSGS.NOT_FOUND });
     } catch (error) {
       console.log(error);
       res.status(500).json({ message: ERROR_MSGS.INTERNAL_SERVER_ERROR });
