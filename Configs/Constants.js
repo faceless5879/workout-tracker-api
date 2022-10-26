@@ -3,6 +3,7 @@ const ERROR_MSGS = {
   INTERNAL_SERVER_ERROR: "Internal Server Error",
   UNAUTHORIZED: "Unauthorized",
   INVALID_EMAIL: "Invalid email address",
+  EMAIL_IN_USE: "Email already in use",
 };
 const REGEXES = {
   EMAIL:

@@ -2,6 +2,8 @@ const express = require("express");
 const { ERROR_MSGS } = require("../../Configs/Constants");
 require("dotenv").config();
 const jwt = require("jsonwebtoken");
+const knex = require("../../db/index");
+
 const UserController = {
   getUser: async (req, res) => {
     try {
@@ -46,8 +48,21 @@ const UserController = {
     try {
       const { email, password, firstName, lastName, height, weight } = req.body;
       console.log(email, password, firstName, lastName, height, weight);
+      const newUser = [
+        {
+          first_name: firstName,
+          last_name: lastName,
+          email: email,
+          password: password,
+          height: height,
+          weight: weight,
+        },
+      ];
+      const data = await knex("user").returning(["id"]).insert(newUser);
+      console.log(data);
+
       const token = jwt.sign(
-        { email: email },
+        { firstName: firstName, lastName: lastName, userid: data[0]["id"] },
         process.env.JWT_SECRET || "my_secret",
         {
           expiresIn: "1h",
