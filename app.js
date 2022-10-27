@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const cors = require("cors");
 const timeout = require("connect-timeout");
 require("dotenv").config();
 const defaultRoutes = require("./Routes/DefaultRoutes");
@@ -10,6 +11,7 @@ const exerciseRoutes = require("./Routes/Exercise/ExerciseRoutes");
 const PORT = process.env.PORT | 3000;
 app.use(express.json());
 app.use(timeout("5s"));
+app.use(cors());
 
 /** Rules of the API */
 app.use((req, res, next) => {
