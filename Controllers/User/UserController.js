@@ -56,7 +56,7 @@ const UserController = {
             expiresIn: "1h",
           }
         );
-        res.status(200).json({ token: token });
+        res.status(200).json({ token: token, userid: data[0]["id"] });
         return;
       }
       res.status(401).json({ error: ERROR_MSGS.VALIDATION_ERROR });
@@ -89,7 +89,7 @@ const UserController = {
           expiresIn: "1h",
         }
       );
-      res.status(201).json({ token: token });
+      res.status(201).json({ token: token, userid: data[0]["id"] });
       return;
     } catch (error) {
       console.log(error);
