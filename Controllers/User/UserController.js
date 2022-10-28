@@ -96,6 +96,40 @@ const UserController = {
       res.status(500).json({ message: ERROR_MSGS.INTERNAL_SERVER_ERROR });
     }
   },
+  putUser: async (req, res) => {
+    try {
+      const { userid } = req.params;
+      const { firstName, lastName, email, password, height, weight } = req.body;
+      console.log(userid);
+
+      if (userid === undefined) {
+        res.status(500).json({ message: ERROR_MSGS.INTERNAL_SERVER_ERROR });
+        return;
+      }
+
+      const data = await knex("user")
+        .where({ id: userid })
+        .update({
+          first_name: firstName,
+          last_name: lastName,
+          email: email,
+          password: password,
+          height: height,
+          weight: weight,
+        })
+        .returning("*");
+      console.log(data);
+
+      if (data.length > 0) {
+        res.status(200).json(data[0]);
+        return;
+      }
+      res.status(404).json({ message: ERROR_MSGS.NOT_FOUND });
+    } catch (error) {
+      console.log(error);
+      res.status(500).json({ message: ERROR_MSGS.INTERNAL_SERVER_ERROR });
+    }
+  },
 };
 
 module.exports = UserController;
