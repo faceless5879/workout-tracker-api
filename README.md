@@ -2,7 +2,7 @@
 
 ## App Description
 
-Workout Tracker API is an API to communicate from Workout Tracker REACT app to the backend and database. Our app is created from REACT because we want to build a responsive website for our users. This repo is for FE only. Please visit this [link](https://github.com/faceless5879/workout-tracker) for the Frontend.
+Workout Tracker API is an RESTful API server. Our app is created from nodejs express with knex for database query. Visit this [github repository](https://github.com/faceless5879/workout-tracker) for the frontend.
 
 ## Getting Started
 
