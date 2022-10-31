@@ -1,0 +1,534 @@
+{
+	"info": {
+		"_postman_id": "0a1ef292-75c2-4682-87a0-1fd9902e6ba0",
+		"name": "workout-tracker",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15777333"
+	},
+	"item": [
+		{
+			"name": "Local",
+			"item": [
+				{
+					"name": "local-workout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJTYXJhaCIsImxhc3ROYW1lIjoiUmljaCIsInVzZXJpZCI6MiwiaWF0IjoxNjY2OTk1NjgxLCJleHAiOjE2NjY5OTkyODF9.Q4O3Vi26djY8qimCep7PAodHd4WMtmQ_8zeCasvXct0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/workout/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"workout",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "local-user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJTYXJhaCIsImxhc3ROYW1lIjoiUmljaCIsInVzZXJpZCI6MiwiaWF0IjoxNjY2OTU3NjQ3LCJleHAiOjE2NjY5NjEyNDd9.maYE8vKQJrTQrY0voMOZkQEqXAioobvDz4ZL5c87YCw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/user/13",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"13"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "local-exercise",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJTYXJhaCIsImxhc3ROYW1lIjoiUmljaCIsInVzZXJpZCI6MiwiaWF0IjoxNjY2OTYxNjQ1LCJleHAiOjE2NjY5NjUyNDV9.kIaAL0HcLhZdNCIe0IUAaFaibQAx57NNftdelFMOgs8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/exercise/14",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"exercise",
+								"14"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "local-login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"sarahrich@123.com\",\r\n    \"password\": \"xyz789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "local-signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"123@23.com\",\r\n    \"password\": \"123\",\r\n    \"firstName\": \"test\",\r\n    \"lastName\": \"test\",\r\n    \"weight\": \"123\",\r\n    \"height\": \"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "local-updateUser",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJTYXJhaCIsImxhc3ROYW1lIjoiUmljaCIsInVzZXJpZCI6MiwiaWF0IjoxNjY2OTk1NjgxLCJleHAiOjE2NjY5OTkyODF9.Q4O3Vi26djY8qimCep7PAodHd4WMtmQ_8zeCasvXct0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/14",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"14"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "local-updateWorkout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJTYXJhaCIsImxhc3ROYW1lIjoiUmljaCIsInVzZXJpZCI6MiwiaWF0IjoxNjY2OTk1NjgxLCJleHAiOjE2NjY5OTkyODF9.Q4O3Vi26djY8qimCep7PAodHd4WMtmQ_8zeCasvXct0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dayOfWeek\": \"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/workout/10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"workout",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "local-updateExercise",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJTYXJhaCIsImxhc3ROYW1lIjoiUmljaCIsInVzZXJpZCI6MiwiaWF0IjoxNjY2OTk1NjgxLCJleHAiOjE2NjY5OTkyODF9.Q4O3Vi26djY8qimCep7PAodHd4WMtmQ_8zeCasvXct0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"1234\",\r\n    \"breakTime\": 1234\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/exercise/100",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"exercise",
+								"100"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "API-URL",
+			"item": [
+				{
+					"name": "workout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJSb2NreSIsImxhc3ROYW1lIjoiU21pdGgiLCJ1c2VyaWQiOjEsImlhdCI6MTY2Njc4MjU5MiwiZXhwIjoxNjY2Nzg2MTkyfQ.gdbirZoxkeNrOIz2QAmVJyE4WquhEtbhJnU9iRveCCw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/workout/1",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"workout",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJSb2NreSIsImxhc3ROYW1lIjoiU21pdGgiLCJ1c2VyaWQiOjEsImlhdCI6MTY2Njg2MzkxNCwiZXhwIjoxNjY2ODY3NTE0fQ.941pySAEVfUDJviKrspBg6W3S9MESlCErOWWLavt6bY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/user/5",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"user",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "exercies",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJSb2NreSIsImxhc3ROYW1lIjoiU21pdGgiLCJ1c2VyaWQiOjEsImlhdCI6MTY2Njc4MjU5MiwiZXhwIjoxNjY2Nzg2MTkyfQ.gdbirZoxkeNrOIz2QAmVJyE4WquhEtbhJnU9iRveCCw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/exercise/1",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"exercise",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"rockysmith@123.com\",\r\n    \"password\": \"abc123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL}}/user/login",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"matthew@123.com\",\r\n    \"password\": \"123\",\r\n    \"firstName\": \"matthew\",\r\n    \"lastName\": \"test\",\r\n    \"weight\": \"123\",\r\n    \"height\": \"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL}}/user/signup",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"user",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateUser",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJTYXJhaCIsImxhc3ROYW1lIjoiUmljaCIsInVzZXJpZCI6MiwiaWF0IjoxNjY2OTk1NjgxLCJleHAiOjE2NjY5OTkyODF9.Q4O3Vi26djY8qimCep7PAodHd4WMtmQ_8zeCasvXct0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL}}/user/14",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"user",
+								"14"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateWorkout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJTYXJhaCIsImxhc3ROYW1lIjoiUmljaCIsInVzZXJpZCI6MiwiaWF0IjoxNjY2OTk1NjgxLCJleHAiOjE2NjY5OTkyODF9.Q4O3Vi26djY8qimCep7PAodHd4WMtmQ_8zeCasvXct0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dayOfWeek\": \"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL}}/workout/10",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"workout",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateExercise",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJTYXJhaCIsImxhc3ROYW1lIjoiUmljaCIsInVzZXJpZCI6MiwiaWF0IjoxNjY2OTk1NjgxLCJleHAiOjE2NjY5OTkyODF9.Q4O3Vi26djY8qimCep7PAodHd4WMtmQ_8zeCasvXct0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"1234\",\r\n    \"breakTime\": 1234\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL}}/exercise/100",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"exercise",
+								"100"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
